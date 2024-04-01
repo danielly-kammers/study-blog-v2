@@ -39,9 +39,7 @@ function SideEffects() {
      <h2 className="section-title">Anotações</h2>
 
      <SimpleCard>
-      <h2 className="second-title">
-       O que podem ser as ações de um efeito colateral
-      </h2>
+      <h2 className="second-title">Exemplos de efeitos colaterais:</h2>
       <ul>
        <li>Buscar dados em um servidor</li>
        <li>Ler ou gravar dados no armazenamento do navegador</li>

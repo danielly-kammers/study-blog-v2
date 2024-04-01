@@ -90,7 +90,7 @@ function ControlledVsUncontrolledComponents() {
         <b>value</b> para que o input funcione;
        </li>
        <li>
-        A validação do formulário pode ser realizada instantâneamente usando o{" "}
+        A validação do formulário pode ser realizada instantaneamente usando o{" "}
         <b>useEffect</b>
        </li>
       </ul>
@@ -129,10 +129,6 @@ function ControlledVsUncontrolledComponents() {
        <li>
         No ambiente React, refs nos fornecem um caminho para que possamos
         manipular os componentes;
-       </li>
-       <li>
-        Está mais próximo da experiência de criar formulários com Javascript
-        vanilla
        </li>
        <li>
         É muito mais performático por não renderizar os componentes

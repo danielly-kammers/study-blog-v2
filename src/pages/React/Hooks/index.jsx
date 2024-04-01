@@ -64,11 +64,12 @@ function Hooks() {
 
       <h2 className="caption">Pra que servem os Hooks de estado</h2>
       <span className="mb-2">
-       Os hooks de estado permite que um componente “lembre” informações. Por
-       exemplo, um componente de contador pode usar um estado para armazenar o
-       valor atual do contador, sendo assim sempre que o valor do contador for
-       alterado (pra adicionar +1, por exemplo) a alteração será exibida na
-       tela.
+       Os hooks de estado permitem que você gerencie os estados de um
+       componente. Ou seja, são eles que você usa para que um componente
+       “lembre” informações. Por exemplo, um componente de contador pode usar um
+       estado para armazenar o valor atual do contador, sendo assim sempre que o
+       valor do contador for alterado (pra adicionar +1, por exemplo) a
+       alteração será exibida na tela.
       </span>
 
       <span>
@@ -108,11 +109,11 @@ function Hooks() {
 
       <h2 className="caption">Pra que servem os Hooks de referência</h2>
       <span className="mb-2">
-       Refs permitem que um componente retenha algumas informações que não são
-       usadas para renderização, como um elemento do HTML ou um ID de tempo
-       limite. Ao contrário do estado, atualizar uma referência não renderiza
-       novamente seu componente. Refs são uma &quot;saída de fuga&quot; do
-       paradigma React.
+       Os hooks de referência permitem que um componente retenha algumas
+       informações que não são usadas para renderização, como um elemento do
+       HTML ou um ID de tempo limite. Ao contrário do estado, atualizar uma
+       referência não renderiza novamente seu componente. Refs são uma
+       &quot;saída de fuga&quot; do paradigma React.
       </span>
 
       <span className="mb-2">
