@@ -2,13 +2,28 @@ import { useEffect, useState } from "react";
 import PostHeader from "../../../components/PostHeader";
 import SimpleCard from "../../../components/SimpleCard";
 import useFetch from "../../../hooks/useFetch";
+import TipText from "../../../components/TipText";
 
 function Hooks() {
  const [randomPass, setRandomPass] = useState(null);
  const [secondsInThePage, setSecondsInThePage] = useState(0);
+ const [incorrectSum, setIncorrectSum] = useState(0);
+ const [correctSum, setCorrectSum] = useState(0);
  const [users, isLoading] = useFetch(
   "https://jsonplaceholder.typicode.com/users"
  );
+
+ function handleSumIncorrect() {
+  setIncorrectSum(incorrectSum + 1);
+  setIncorrectSum(incorrectSum + 1);
+  setIncorrectSum(incorrectSum + 1);
+ }
+
+ function handleSumCorrect() {
+  setCorrectSum((sum) => sum + 1);
+  setCorrectSum((sum) => sum + 1);
+  setCorrectSum((sum) => sum + 1);
+ }
 
  function generatePassword(length) {
   const charset =
@@ -202,6 +217,61 @@ function Hooks() {
       </button>
 
       <p className="caption">Senha gerada: {randomPass}</p>
+     </SimpleCard>
+
+     <SimpleCard>
+      <h2 className="second-title">
+       Atualizando estados com base no valor anterior
+      </h2>
+
+      <TipText
+       text="Para simular um ambiente onde o estado é atualizado mais de uma vez em um
+       curto período de tempo, ambas as somas são realizadas como intruções de
+       +1 por 3 vezes consecutivas."
+       margin="0 0 1rem"
+      />
+
+      <p className="mb-2">
+       O Hook useState funciona “como uma promise”, logo em algumas situações
+       quando referenciamos o valor atual do estado para adicionar +1 podem
+       haver confusões. Como no botão abaixo, que deveria somar 3 no valor:
+      </p>
+
+      <code className="mb-2">
+       setIncorrectSum(incorrectSum + 1); <br />
+       setIncorrectSum(incorrectSum + 1); <br />
+       setIncorrectSum(incorrectSum + 1);
+      </code>
+
+      <button className="mb-2" onClick={() => handleSumIncorrect()}>
+       Somar 3
+      </button>
+
+      <h4 className="caption">Resultado da soma: {incorrectSum}</h4>
+
+      <p className="mb-2">
+       Isso ocorre porque ele não está se baseando corretamente no estado
+       anterior. Nesse caso em específico o setState anterior ainda está em
+       execução e ele não executará os dois próximos.
+      </p>
+
+      <p className="mb-2">
+       Por situações como a de cima, o indicado sempre que se altera um estado
+       baseado no valor anterior é usar o padrão de &quot;atualizador&quot; do
+       useState, conforme o botão abaixo, que somará corretamente:
+      </p>
+
+      <code className="mb-2">
+       setCorrectSum((sum) ={">"} sum + 1); <br />
+       setCorrectSum((sum) ={">"} sum + 1); <br />
+       setCorrectSum((sum) ={">"} sum + 1);
+      </code>
+
+      <button className="mb-2" onClick={() => handleSumCorrect()}>
+       Somar 3
+      </button>
+
+      <h4 className="caption">Resultado da soma: {correctSum}</h4>
      </SimpleCard>
 
      <SimpleCard>
