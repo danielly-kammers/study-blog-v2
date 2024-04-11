@@ -1,5 +1,5 @@
 {
-  "homepage": "https://danielly-kammers.github.io/study-blog-v2",
+  "homepage": "http://localhost:3000",
   "name": "study-blog-v2",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint --ext .jsx,.js src/",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {

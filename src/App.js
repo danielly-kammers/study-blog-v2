@@ -13,6 +13,7 @@ import {
  Hooks,
  SideEffects
 } from "./pages/React";
+import NotFound from "./pages/NotFound";
 
 function App() {
  const router = createBrowserRouter([
@@ -61,6 +62,10 @@ function App() {
      element: <SideEffects />
     }
    ]
+  },
+  {
+   path: "*",
+   element: <NotFound />
   }
  ]);
 

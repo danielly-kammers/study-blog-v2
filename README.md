@@ -31,3 +31,12 @@ Criação dos posts sobre React intermediário
 - Hooks customizados
 - Efeito colateral
 - Componentes controlados e não controlados
+
+### Semana 13
+
+Criação dos posts sobre React avançado
+
+- Estado global e ContextAPI
+- Formulários com React Hook Form
+- Build e Deploy do projeto
+- Configurando git-cz no projeto
