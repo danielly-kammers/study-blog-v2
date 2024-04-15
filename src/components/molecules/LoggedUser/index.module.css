@@ -1,0 +1,15 @@
+.wrapper {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+.logoutIcon {
+ margin: 0 0.5rem;
+ cursor: pointer;
+}
+
+.logoutIcon:hover {
+ opacity: 0.5;
+}
